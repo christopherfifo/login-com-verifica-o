@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascript/script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="tema"><i class="fa-solid fa-sun" id="dark"></i></button>
+    <div class="container" id="container">
+
+
+      <div class="form-container register-container">
+            <form action="./back/register.php" method="POST" id="form" class="form_register">
+                <h1>Registre aqui</h1>
+                <div class="espaco-input">
+                <input type="text" name="name" placeholder="Name" class="required input-register"/>
+                <span class="error_span"></span>
+                </div>
+                <div class="espaco-input">
+                <input type="email" name="email" placeholder="Email" class="required input-register"/>
+                <span class="error_span"></span>
+                </div>
+                <div class="espaco-input">
+                <input type="tel" name="telefone" placeholder="Numero de telefone" class="required input-register" />
+                <span class="error_span"></span>
+                </div>
+                <div class="espaco-input">
+                <input type="password" name="password" placeholder="Password" class="required input-register"/>
+                <span class="error_span"></span>
+                </div>
+                <div class="espaco-input">
+                <input type="password" name="password_confirm" placeholder="Confirm Password"class="required input-register"/>
+                <span class="error_span"></span>
+                </div>
+                <button type="submit" id="vali_register">Registrar</button>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a> <!-- talvez tenha a classe lni -->
+                    <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="form-container login-container">
+            <form action="./back/login.php" method="POST">
+                <h1>Login</h1>
+                <input type="email" id="accessInput" name="email" placeholder="Email ou Telefone" />
+                <input type="password" name="password" placeholder="Password" />
+                <div class="content">
+                    <div class="checkbox">
+                        <input type="checkbox" id="rememberCheckbox" name="checkbox"/>
+                        <label for="remember-me">lembre-me</label>
+                    </div>
+                    <div class="pass-link">
+                        <a href="#">Esqueceu a senha?</a>
+                    </div>
+                </div>
+                <button type="submit">Login</button>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a> <!-- talvez tenha a classe lni -->
+                    <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1 class="title">Bem-vindo de volta!</h1>
+                    <p>Para se manter conectado conosco, faça login com suas informações pessoais</p>
+                    <button class="ghost" id="login">Login<i class="login fa-solid fa-arrow-left"></i></button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1 class="title">Olá, Amigo!</h1>
+                    <p>Insira seus dados pessoais e comece sua jornada conosco</p>
+                    <button class="ghost" id="register">Registrar<i class="register fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </body>
+</html>
