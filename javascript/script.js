@@ -132,3 +132,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+//! expor senha
+
+document.querySelectorAll('.olhos').forEach(function(icon) {
+    icon.addEventListener('click', function() {
+        // Seleciona o input associado ao ícone clicado
+        const input = this.previousElementSibling;
+
+        // Alterna o tipo do input entre 'password' e 'text'
+        if (input.type === 'password') {
+            input.type = 'text';
+            this.classList.remove('fa-eye');
+            this.classList.add('fa-eye-slash');
+        } else {
+            input.type = 'password';
+            this.classList.remove('fa-eye-slash');
+            this.classList.add('fa-eye');
+        }
+    });
+});
