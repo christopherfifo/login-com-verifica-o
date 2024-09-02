@@ -14,33 +14,36 @@ loginbtn.addEventListener('click', () => {
 
 //! vericação
 
+// Seleciona elementos do DOM
 const form = document.getElementById('form');
 const campos = document.querySelectorAll(".required");
 const span = document.querySelectorAll(".error_span");
 const validarRegistro = document.getElementById("vali_register");
 const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
-const validators = {
-    0: value => value.length >= 3 || 'O nome deve ter pelo menos 3 caracteres.',
-    1: value => emailRegex.test(value) || 'Email inválido.',
-    2: value => value.length >= 11 || 'O número deve ter pelo menos 11 caracteres.',
-    3: value => {
+// Funções de validação
+const validators = [
+    value => value.length >= 3 || 'O nome deve ter pelo menos 3 caracteres.',
+    value => emailRegex.test(value) || 'Email inválido.',
+    value => value.length >= 11 || 'O número deve ter pelo menos 11 caracteres.',
+    value => {
         if (value.length < 8) return 'A senha deve ter pelo menos 8 caracteres.';
         if (!/[A-Z]/.test(value)) return 'A senha deve ter pelo menos uma letra maiúscula.';
         if (!/[!@#$%^&*(),.?":{}|<>]/.test(value)) return 'A senha deve ter pelo menos um caractere especial.';
         return true;
     },
-    4: (value, campos) => {
+    (value, campos) => {
         if (value === '') return 'Campo Obrigatório';
         if (value !== campos[3].value) return 'As senhas não coincidem.';
         return true;
     }
-};
+];
 
+// Funções de manipulação de erros
 function setError(index, message) {
     campos[index].style.border = '2px solid red';
     span[index].style.display = 'block';
-    span[index].innerHTML = message;
+    span[index].textContent = message;// o texto mandado pela validações
 }
 
 function removeError(index) {
@@ -48,25 +51,22 @@ function removeError(index) {
     span[index].style.display = 'none';
 }
 
+// Validação de um campo específico
 function validateField(index) {
     const field = campos[index];
     const validator = validators[index];
-    const result = validator(field.value, campos);
-    if (result !== true) {
-        setError(index, result);
-        return false;
-    } else {
+    const result = validator(field.value, campos);// to mandando todos os campos
+
+    if (result === true) {
         removeError(index);
         return true;
+    } else {
+        setError(index, result);
+        return false;
     }
 }
 
-campos.forEach((campo, index) => {
-    campo.addEventListener('input', () => validateField(index));
-});
-
-validarRegistro.addEventListener("click", validacaoFinal);
-
+// Valida todos os campos e executa a ação final
 function validacaoFinal(event) {
     event.preventDefault(); // Impede o comportamento padrão do botão
 
@@ -84,6 +84,13 @@ function validacaoFinal(event) {
         // window.location.href = "seu_link_aqui";
     }
 }
+
+// Adiciona os ouvintes de eventos
+campos.forEach((campo, index) => {
+    campo.addEventListener('input', () => validateField(index));
+});
+
+validarRegistro.addEventListener("click", validacaoFinal);
 
 //! trocar de tema
 
