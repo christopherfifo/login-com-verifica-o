@@ -183,6 +183,38 @@ input {
     font-weight: 500;
 }
 
+.gerar-senha{
+    display: flex;
+}
+
+.size-span{
+    flex: 1;
+}
+
+.title-senha{
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.senha_btn{
+    background: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+}
+
+.senha_btn:hover i{
+    color: #4bb6b7;
+}
+
+/* div que enbloba tudo*/
 .container{
     background-color: #fff;
     border-radius: 25px;
@@ -194,6 +226,7 @@ input {
     min-height: 500px;
 }
 
+/*define a altura dos dois blocos de dados*/
 .form-container{
     position: absolute;
     top: 0;
@@ -207,6 +240,7 @@ input {
     z-index: 2;
 }
 
+/*move a div que fica por cima de tudo*/
 .container.right-panel-active .login-container{
     transform: translateX(100%);
 }
@@ -237,6 +271,7 @@ input {
     }
 }
 
+/*nesse estado cada div tem metade do tamanho e fica um do lado do outro forms e esse*/
 .overlay-container{
     position: absolute;
     top: 0;
@@ -248,10 +283,12 @@ input {
     z-index: 100;
 }
 
+/*ele vem para esqueda*/
 .container.right-panel-active .overlay-container{
     transform: translateX(-100%);
 }
 
+/* aqui ele fica com o dobro do tamanho da overlay-container, o que deixaria a parte do regitro a mostra, mas ele puxa para esquerda ai fica do login*/
 .overlay{
     background-image:url(../pictures/1610608621945.gif);
     background-repeat: no-repeat;
@@ -295,6 +332,13 @@ input {
     transition: transform 0.6s ease-in-out;
 }
 
+/*parte para aparecer o gerador*/
+
+.gerador-local{
+    display: block;
+}
+/*********************************************/
+
 .overlay-left{
     transform: translateX(-20%);
 }
@@ -330,30 +374,6 @@ input {
 
 .social-container a:hover{
     border: 1px solid #4bb6b7;
-}
-
-.tema {
-    background: transparent;
-    border: none;
-    width: auto;
-    letter-spacing: 0px;
-    padding: 0;
-    margin: 0;
-    position: absolute; /* Altera o position para absolute */
-    top: 20px; /* Ajuste o valor conforme necessário para a distância do topo */
-    right: 20px; /* Ajuste o valor conforme necessário para a distância da borda direita */
-    transform: translate(0, 50%); /* Para ajustar o ícone um pouco abaixo da linha central */
-    z-index: 1000; /* Certifique-se de que ele fique sobreposto a outros elementos */
-}
-
-
-.tema:hover{
-        letter-spacing: 0px;
-}
-
-#dark{
-    font-size: 2rem;
-    color: black;
 }
 
 .espaco-senha{

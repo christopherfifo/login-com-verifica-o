@@ -79,9 +79,9 @@ function validacaoFinal(event) {
     });
 
     if (formValido) {
-        // Se todos os campos estiverem válidos, você pode prosseguir com a ação desejada
-        // Por exemplo, redirecionar para outro link ou enviar o formulário
-        // window.location.href = "seu_link_aqui";
+        alert('Formulário válido!'); // Substitua por sua ação final
+    }else{
+        alert('Formulário inválido!'); // Substitua por sua ação final
     }
 }
 
@@ -158,4 +158,118 @@ document.querySelectorAll('.olhos').forEach(function(icon) {
             this.classList.add('fa-eye');
         }
     });
+});
+
+//! mostrar o gerador de senha
+
+const btnGerar = document.querySelector('.senha_btn');
+const painelEsquerda = document.querySelector('.overlay-left');
+const esquerdaElements = document.querySelectorAll('.gerador-local');
+const gerador = document.querySelector('.senha_container');
+
+let valido =''
+
+btnGerar.addEventListener('click', SenhaEspaco)
+
+    
+function SenhaEspaco(event){
+    event.preventDefault();
+    if (painelEsquerda.style.padding === '0px' || painelEsquerda.style.padding === '') {
+        painelEsquerda.style.padding = '0 40px';
+    } else {
+        painelEsquerda.style.padding = '0px';
+    }
+    valido = true;
+    gerarGerador()
+}
+
+function gerarGerador() {;
+    if(valido){
+    esquerdaElements.forEach(element => {
+        (element.style.display === 'flex' || element.style.display === 'block') ? element.style.display = 'none' : element.style.display = 'block'
+    });
+    (gerador.style.display === 'none') ? gerador.style.display = 'flex' : gerador.style.display = 'none';
+}else{
+    alert('erro')
+}
+} 
+
+
+
+//! gerador de senhas
+
+const senhaLinha = document.getElementById('senha-linha');
+const senhaCaixa = document.getElementById("senha-caixa");
+const senhaMostrar = document.getElementById("mostrar");
+const btnGeraracao = document.getElementById("gerar");
+const btnCopiar = document.getElementById("copiar");
+const lugarPassword = document.getElementById("password");
+const containerSenha = document.querySelector(".senha");
+const inputSenha = document.querySelectorAll(".senha-marcavel");
+const letramaiuscula = document.getElementById('maiscula');
+const letraMinuscula = document.getElementById('minuscula');
+const numero = document.getElementById('numero');
+const simbolo = document.getElementById('simbolo');
+const senhaCopyInputs = document.querySelectorAll(".senha-copy");
+
+letraMinuscula.value = "abcdefghijklmnopqrstuvwxyz";
+letramaiuscula.value = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+numero.value = "0123456789";
+simbolo.value = "!@#$%&*()_+";
+
+senhaLinha.oninput = function () {
+    senhaMostrar.innerHTML = this.value;
+    senhaCaixa.value = this.value;
+};
+
+senhaCaixa.oninput = function () {
+    senhaMostrar.innerHTML = this.value;
+    senhaLinha.value = this.value;
+};
+
+let novaSenha = "";
+let senha = "";
+
+btnGeraracao.addEventListener("click", geracaoSenha);
+
+function geracaoSenha() {
+    senha = ""; // Resetar a senha a cada geração
+
+    inputSenha.forEach(function(dados) {
+        if (dados.checked) {
+            senha += dados.value;
+        }
+    });
+
+    let pass = '';
+
+    for (let i = 0, n = senha.length; i < senhaLinha.value; i++) {
+        pass += senha.charAt(Math.floor(Math.random() * n));
+    }
+
+    containerSenha.style.display = "flex";
+    lugarPassword.innerHTML = pass;
+
+    novaSenha = pass;
+}
+
+lugarPassword.addEventListener("click", function() {
+    alert("Senha copiada com sucesso");
+    navigator.clipboard.writeText(novaSenha);
+});
+
+btnCopiar.addEventListener("click", function() {
+senhaCopyInputs.forEach(function(input) {
+    input.value = novaSenha;
+    removeError(3);
+    removeError(4);
+});
+navigator.clipboard.writeText(novaSenha)
+if (painelEsquerda.style.padding === '0px' || painelEsquerda.style.padding === '') {
+    painelEsquerda.style.padding = '0 40px';
+} else {
+    painelEsquerda.style.padding = '0px';
+}
+valido = true;
+gerarGerador()
 });

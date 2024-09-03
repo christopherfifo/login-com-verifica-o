@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/senha.css">
+    <link rel="stylesheet" href="./css/tema.css">
     <script src="./javascript/script.js" defer></script>
     <title>Document</title>
   </head>
@@ -30,17 +32,20 @@
                 </div>
                 <div class="espaco-input">
                 <div class="espaco-senha">
-                <input type="password" name="password" placeholder="Password" class="required input-register"/>
+                <input type="password" name="password" placeholder="Password" class="required input-register senha-copy"/>
                 <i class="fa-regular fa-eye olhos"></i>
                 </div>
                 <span class="error_span"></span>
                 </div>
                 <div class="espaco-input">
                 <div class="espaco-senha">
-                <input type="password" name="password_confirm" placeholder="Confirm Password"class="required input-register"/>
+                <input type="password" name="password_confirm" placeholder="Confirm Password"class="required input-register senha-copy"/>
                 <i class="fa-regular fa-eye olhos"></i>
                 </div>
-                <span class="error_span"></span>
+                <div class="gerar-senha">
+                    <span class="title-senha size-span">Gere a sua senha: <button class="senha_btn"><i class="fa-solid fa-lock"></i></button> </span>
+                    <span class="error_span size-span"></span>
+                </div>
                 </div>
                 <button type="submit" id="vali_register">Registrar</button>
                 <div class="social-container">
@@ -84,9 +89,54 @@
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                    <h1 class="title">Bem-vindo de volta!</h1>
-                    <p>Para se manter conectado conosco, faça login com suas informações pessoais</p>
-                    <button class="ghost" id="login">Login<i class="login fa-solid fa-arrow-left"></i></button>
+                    <main class="senha_container">
+                        <section class="senha_dados">
+                            <div class="senha_dados-info especial">
+                                <div class="senha_title">
+                                <p class="title_gerador">Quantidade de caracteres:</p>
+                                <span class="senha_mostrar" id="mostrar"></span>
+                                </div>
+                                <div class="senha_tamanho">
+                                    <input class="senha_linha" type="range" name="" id="senha-linha" min="8" max="25" value="8">
+                                    <input class="senha_caixa" type="number" name="" id="senha-caixa" min="8" max="25" value="8">
+                                </div>
+                            </div>
+                                <div class="senha_dados-info">
+                                    <p class="title_gerador">Incluir letras maiúsculas:</p>
+                                    <input class="senha-marcavel" type="checkbox" name="" id="maiscula">
+                                </div>
+                                <div class="senha_dados-info">
+                                    <p class="title_gerador">Incluir letras minúsculas:</p>
+                                    <input class="senha-marcavel" type="checkbox" name="" id="minuscula">
+                                </div>
+                                <div class="senha_dados-info">
+                                    <p class="title_gerador">Incluir números:</p>
+                                    <input class="senha-marcavel" type="checkbox" name="" id="numero">
+                                </div>
+                                <div class="senha_dados-info">
+                                    <p class="title_gerador">Incluir símbolos:</p>
+                                    <input class="senha-marcavel" type="checkbox" name="" id="simbolo">
+                                </div>
+                    
+                                <div class="senha_button">
+                                    <button class="senha-btn" id="gerar">Gerar</button>
+                                </div>
+                        </section>
+                    
+                        <section class="senha">
+                            <div class="senha_lugar" >
+                                <p class="senha_texto" id="password" ></p>
+                            </div>
+                            <div class="senha_button">
+                            <button class="senha-btn btn-copiar" id="copiar">Copiar</button>
+                            </div>
+                        </section>
+                    
+                    </main>
+                    
+                    <h1 class="title gerador-local">Bem-vindo de volta!</h1>
+                    <p class=" gerador-local">Para se manter conectado conosco, faça login com suas informações pessoais</p>
+                    <button class="ghost gerador-local" id="login">Login<i class="login fa-solid fa-arrow-left"></i></button>
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1 class="title">Olá, Amigo!</h1>

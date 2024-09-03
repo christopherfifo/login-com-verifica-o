@@ -1,0 +1,23 @@
+.tema {
+    background: transparent;
+    border: none;
+    width: auto;
+    letter-spacing: 0px;
+    padding: 0;
+    margin: 0;
+    position: absolute; /* Altera o position para absolute */
+    top: 20px; /* Ajuste o valor conforme necessário para a distância do topo */
+    right: 20px; /* Ajuste o valor conforme necessário para a distância da borda direita */
+    transform: translate(0, 50%); /* Para ajustar o ícone um pouco abaixo da linha central */
+    z-index: 1000; /* Certifique-se de que ele fique sobreposto a outros elementos */
+}
+
+
+.tema:hover{
+        letter-spacing: 0px;
+}
+
+#dark{
+    font-size: 2rem;
+    color: black;
+}

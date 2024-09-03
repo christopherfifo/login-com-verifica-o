@@ -1,0 +1,145 @@
+.senha_container {
+    width: 100%;
+    height: 100%; /* Ajusta a altura conforme o conteúdo */ /* Impede que a altura exceda 100% do pai */
+    display: none;
+    flex-direction: column;
+    padding: 10px 20px 0 20px;
+    background-image: url(../pictures/isso.gif);
+}
+
+
+.senha_dados{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.senha_dados-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.especial{
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-bottom: 10px;
+}
+
+.senha_title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.senha_mostrar{
+    color: aliceblue;
+    font-weight: 700;
+}
+
+.title_gerador{
+    color: #acb9e4;
+    font-weight: 800;
+    font-size: 1.20rem;
+    margin: 0;
+}
+
+.senha_tamanho{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    align-items: center;
+}
+
+.senha_caixa{
+    width: 40px;
+    height: 20px;
+}
+
+.senha_linha{
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.senha-marcavel{
+    width: 40px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.senha_button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.senha-btn{
+    width: 100px;
+    height: 35px;
+    background-color: #4bb6b7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-copiar{
+    margin-block: .5rem;
+}
+.senha {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    border-radius: 15px;
+    height: 100%;
+    background: rgba(224, 221, 221, 0.884); 
+    margin-block: 0.5rem;
+}
+
+.senha_lugar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    text-align: center;
+}
+
+.senha_texto {
+    margin: auto;
+    width: 100%; /* Ajuste a largura conforme necessário */
+    color: rgb(94, 96, 255);
+    font-weight: 700;
+    font-size: 2rem;
+    flex-wrap: wrap;
+    word-break: break-all; /* Permite a quebra de palavras longas */
+    text-align: center;
+}
+
+@media (width < 475px){
+    .senha_tamanho{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem;
+    }
+}
