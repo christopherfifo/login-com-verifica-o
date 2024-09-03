@@ -170,20 +170,21 @@ const painelEsquerda = document.querySelector(".overlay-left");
 const esquerdaElements = document.querySelectorAll(".gerador-local");
 const gerador = document.querySelector(".senha_container");
 
-let valido = "";
+let valido = false;
 
 btnGerar.addEventListener("click", SenhaEspaco);
 
 function SenhaEspaco(event) {
   event.preventDefault();
-  if (
-    painelEsquerda.style.padding === "0px" ||
-    painelEsquerda.style.padding === ""
-  ) {
+
+  const computedStyle = getComputedStyle(painelEsquerda);
+
+  if (computedStyle.padding === "0px" || computedStyle.padding === "0px 0px") {
     painelEsquerda.style.padding = "0 40px";
   } else {
     painelEsquerda.style.padding = "0px";
   }
+
   valido = true;
   gerarGerador();
 }
@@ -191,13 +192,12 @@ function SenhaEspaco(event) {
 function gerarGerador() {
   if (valido) {
     esquerdaElements.forEach((element) => {
-      element.style.display === "flex" || element.style.display === "block"
-        ? (element.style.display = "none")
-        : (element.style.display = "block");
+      const displayStyle = getComputedStyle(element).display;
+      element.style.display = displayStyle === "none" ? "block" : "none";//? getComputedStyle() retorna um objeto que contém os valores de todas as propriedades CSS de um elemento
     });
-    gerador.style.display === "none"
-      ? (gerador.style.display = "flex")
-      : (gerador.style.display = "none");
+
+    const geradorDisplayStyle = getComputedStyle(gerador).display;
+    gerador.style.display = geradorDisplayStyle === "none" ? "flex" : "none";
   } else {
     alert("erro");
   }
