@@ -1,3 +1,19 @@
+.topo{
+    background: transparent;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    padding-inline: 1rem;
+    top: 0;
+    position: absolute; /* Altera o position para absolute */
+    z-index: 1000; /* Certifique-se de que ele fique sobreposto a outros elementos */ 
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+}
+
+
 .tema {
     background: transparent;
     border: none;
@@ -5,11 +21,7 @@
     letter-spacing: 0px;
     padding: 0;
     margin: 0;
-    position: absolute; /* Altera o position para absolute */
-    top: 20px; /* Ajuste o valor conforme necessário para a distância do topo */
-    right: 20px; /* Ajuste o valor conforme necessário para a distância da borda direita */
-    transform: translate(0, 50%); /* Para ajustar o ícone um pouco abaixo da linha central */
-    z-index: 1000; /* Certifique-se de que ele fique sobreposto a outros elementos */
+    cursor: pointer;
 }
 
 
@@ -20,4 +32,31 @@
 #dark{
     font-size: 2rem;
     color: black;
+}
+
+#home{
+    font-size: 2rem;
+}
+
+.home-link{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tema:hover .home-link{
+    color: #4bb6b7;
+}
+
+.home-title{
+    font-size: 1.25rem;
+
+    margin: 0;
+    padding: 0;
+    gap: 0.25rem;
+    display: flex;
+    align-items: center;
 }

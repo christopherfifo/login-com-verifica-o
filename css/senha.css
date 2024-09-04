@@ -4,7 +4,9 @@
   display: none;
   flex-direction: column;
   padding: 10px 20px 0 20px;
-  background-image: url(../pictures/isso.gif);
+  background-image: url(../pictures/senha-dia.gif);
+  background-size: cover; /* Ajusta a imagem para cobrir todo o contêiner */
+  background-position: center; /* Centraliza a imagem no contêiner */
 }
 
 .senha_dados {
@@ -42,7 +44,7 @@
 }
 
 .title_gerador {
-  color: #acb9e4;
+  color: #eceef5;
   font-weight: 800;
   font-size: 1.2rem;
   margin: 0;
