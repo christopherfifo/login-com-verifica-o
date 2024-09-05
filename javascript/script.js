@@ -100,9 +100,8 @@ validarRegistro.addEventListener("click", validacaoFinal);
 
 const obj = document.querySelectorAll(".obj");
 const icon = document.getElementById("dark");
-const temabtn = document.querySelector(".tema");
 
-temabtn.addEventListener("click", respostaTema);
+icon.addEventListener("click", respostaTema);
 
 function respostaTema() {
   obj.forEach((element) => {
@@ -193,7 +192,7 @@ function gerarGerador() {
   if (valido) {
     esquerdaElements.forEach((element) => {
       const displayStyle = getComputedStyle(element).display;
-      element.style.display = displayStyle === "none" ? "block" : "none";//? getComputedStyle() retorna um objeto que contém os valores de todas as propriedades CSS de um elemento
+      element.style.display = displayStyle === "none" ? "block" : "none"; //? getComputedStyle() retorna um objeto que contém os valores de todas as propriedades CSS de um elemento
     });
 
     const geradorDisplayStyle = getComputedStyle(gerador).display;
@@ -240,30 +239,44 @@ let senha = "";
 btnGeraracao.addEventListener("click", geracaoSenha);
 
 function geracaoSenha() {
-  senha = ""; // Resetar a senha a cada geração
-
+  let cond = true;
   inputSenha.forEach(function (dados) {
-    if (dados.checked) {
-      senha += dados.value;
+    if (!dados.checked) {
+      cond = false;
+      return;
     }
   });
 
-  let pass = "";
+  if (cond) {
+    senha = ""; // Resetar a senha a cada geração
 
-  for (let i = 0, n = senha.length; i < senhaLinha.value; i++) {
-    pass += senha.charAt(Math.floor(Math.random() * n));
+    inputSenha.forEach(function (dados) {
+      if (dados.checked) {
+        senha += dados.value;
+      }
+    });
+
+    let pass = "";
+
+    for (let i = 0, n = senha.length; i < senhaLinha.value; i++) {
+      pass += senha.charAt(Math.floor(Math.random() * n));
+    }
+
+    containerSenha.style.display = "flex";
+    lugarPassword.innerHTML = pass;
+
+    novaSenha = pass;
+  } else {
+    return;
   }
-
-  containerSenha.style.display = "flex";
-  lugarPassword.innerHTML = pass;
-
-  novaSenha = pass;
 }
 
 lugarPassword.addEventListener("click", function () {
   alert("Senha copiada com sucesso");
   navigator.clipboard.writeText(novaSenha);
 });
+
+//? passa o valor para os input
 
 btnCopiar.addEventListener("click", function () {
   senhaCopyInputs.forEach(function (input) {
@@ -280,6 +293,5 @@ btnCopiar.addEventListener("click", function () {
   } else {
     painelEsquerda.style.padding = "0px";
   }
-  valido = true;
   gerarGerador();
 });

@@ -293,7 +293,7 @@ input {
 
 /* aqui ele fica com o dobro do tamanho da overlay-container, o que deixaria a parte do regitro a mostra, mas ele puxa para esquerda ai fica do login*/
 .overlay {
-  background-image: url(../pictures/1610608621945.gif);
+  background-image: url(../pictures/gif-dia.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -394,4 +394,8 @@ input {
   cursor: pointer;
   z-index: 1;
   color: #4bb6b7;
+}
+
+a.dark:hover{
+  color: rgb(43, 43, 151);
 }

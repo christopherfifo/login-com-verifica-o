@@ -60,3 +60,44 @@
     display: flex;
     align-items: center;
 }
+
+.obj.dark#dark{
+    color: white;
+}
+
+.home-link.dark{
+    color: white;
+}
+
+.tema:hover .home-link.dark{
+    color: #4bb6b7;
+}
+
+body.obj.dark{
+    background: black;
+}
+
+.rl-tema.dark{
+    border: 1px solid rgb(43, 43, 151);
+    background-color: rgb(43, 43, 151);
+}
+
+.olhos.dark{
+    color: rgb(43, 43, 151);
+}
+
+.social-container.dark a:hover {
+    border: 1px solid rgb(43, 43, 151);
+  }
+
+  .overlay.dark{
+    background-image: url(../pictures/gif-noite.gif);
+  }
+
+  .senha_container.dark{
+    background-image: url(../pictures/senha-noite.gif);
+  }
+
+  .senha_btn.dark:hover i{
+    color: rgb(43, 43, 151);
+  }
