@@ -1,103 +1,112 @@
-.topo{
-    background: transparent;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    padding-inline: 1rem;
-    top: 0;
-    position: absolute; /* Altera o position para absolute */
-    z-index: 1000; /* Certifique-se de que ele fique sobreposto a outros elementos */ 
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    display: flex;
+.topo {
+  background: transparent;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-inline: 1rem;
+  top: 0;
+  position: absolute; /* Altera o position para absolute */
+  z-index: 1000; /* Certifique-se de que ele fique sobreposto a outros elementos */
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  display: flex;
 }
-
 
 .tema {
-    background: transparent;
-    border: none;
-    width: auto;
-    letter-spacing: 0px;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
+  background: transparent;
+  border: none;
+  width: auto;
+  letter-spacing: 0px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
 }
 
-
-.tema:hover{
-        letter-spacing: 0px;
+.tema:hover {
+  letter-spacing: 0px;
 }
 
-#dark{
-    font-size: 2rem;
-    color: black;
+#dark {
+  font-size: 2rem;
+  color: black;
 }
 
-#home{
-    font-size: 2rem;
+#home {
+  font-size: 2rem;
 }
 
-.home-link{
-    width: 100%;
-    text-decoration: none;
-    color: black;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.home-link {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.tema:hover .home-link{
-    color: #4bb6b7;
+.tema:hover .home-link {
+  color: #4bb6b7;
 }
 
-.home-title{
-    font-size: 1.25rem;
-
-    margin: 0;
-    padding: 0;
-    gap: 0.25rem;
-    display: flex;
-    align-items: center;
+.home-title {
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0;
+  gap: 0.25rem;
+  display: flex;
+  align-items: center;
 }
 
-.obj.dark#dark{
-    color: white;
+.obj.dark#dark {
+  color: white;
 }
 
-.home-link.dark{
-    color: white;
+.home-link.dark {
+  color: white;
 }
 
-.tema:hover .home-link.dark{
-    color: #4bb6b7;
+.tema:hover .home-link.dark {
+  color: #4bb6b7;
 }
 
-body.obj.dark{
-    background: black;
+body.obj.dark {
+  background: black;
 }
 
-.rl-tema.dark{
-    border: 1px solid rgb(43, 43, 151);
-    background-color: rgb(43, 43, 151);
+.rl-tema.dark {
+  border: 1px solid rgb(43, 43, 151);
+  background-color: rgb(43, 43, 151);
 }
 
-.olhos.dark{
-    color: rgb(43, 43, 151);
+.olhos.dark {
+  color: rgb(43, 43, 151);
 }
 
 .social-container.dark a:hover {
-    border: 1px solid rgb(43, 43, 151);
-  }
+  border: 1px solid rgb(43, 43, 151);
+}
 
-  .overlay.dark{
-    background-image: url(../pictures/gif-noite.gif);
-  }
+.overlay.dark {
+  background-image: url(../pictures/gif-noite.gif);
+}
 
-  .senha_container.dark{
-    background-image: url(../pictures/senha-noite.gif);
-  }
+.senha_container.dark {
+  background-image: url(../pictures/senha-noite.gif);
+}
 
-  .senha_btn.dark:hover i{
+.senha_btn.dark:hover i {
+  color: rgb(43, 43, 151);
+}
+
+.senha-btn.dark {
+  background-color: rgb(43, 43, 151);
+}
+
+a.dark:hover {
+  color: rgb(43, 43, 151);
+}
+
+.tema.dark:hover .home-link{
     color: rgb(43, 43, 151);
-  }
+}
