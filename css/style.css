@@ -339,6 +339,11 @@ input {
 .gerador-local {
   display: block;
 }
+
+.p_description{
+  color: #fff;
+  font-weight: 300;
+}
 /*********************************************/
 
 .overlay-left {
@@ -438,7 +443,7 @@ button{
     background: white;
   }
   .problema{
-    margin-top: 3.5rem;
+    margin-top: 4.5rem;
   }
   .social-container{
     width: 100%;
@@ -510,7 +515,7 @@ button{
     padding-top: 3.25rem;
   }
   .problema{
-    margin-top: 2.5rem;
+    margin-top: 3.5rem;
   }
 }
 
