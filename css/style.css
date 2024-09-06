@@ -513,11 +513,37 @@ input {
   }
 }
 
-@media (width < 316px) {
+
+@media (width <= 320px) {
   .register-container {
-    padding-top: 3.25rem;
+    padding-top: 10.25rem;
   }
   .problema {
-    margin-top: 3.5rem;
+    margin-top: 0;
+  }
+  .container {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    height: 82dvh;
+    margin-block: 3rem;
+  }
+  .login-container{
+    padding-top: 4.25rem;
+  }
+}
+@media (height <= 736px) {
+  .register-container {
+    padding-top: 10.20rem;
+  }
+  .problema {
+    margin-top: 0;
+  }
+  .container {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  .login-container{
+    padding-top: 4.25rem;
+    overflow-y: auto;
   }
 }
