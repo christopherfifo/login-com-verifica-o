@@ -438,10 +438,13 @@ button{
     background: white;
   }
   .problema{
-    margin-top: 2rem;
+    margin-top: 3.5rem;
   }
   .social-container{
+    width: 100%;
+    justify-content: space-between;
     gap: 0.25rem;
+    display: flex;
   }
   .social-container a{
     height: 3.25rem;
@@ -505,6 +508,9 @@ button{
 @media (width < 316px){
   .register-container{
     padding-top: 3.25rem;
+  }
+  .problema{
+    margin-top: 2.5rem;
   }
 }
 
