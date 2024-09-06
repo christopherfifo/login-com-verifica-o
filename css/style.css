@@ -531,7 +531,7 @@ input {
     padding-top: 4.25rem;
   }
 }
-@media (height <= 736px) {
+@media (height <= 768px) {
   .register-container {
     padding-top: 10.20rem;
   }
