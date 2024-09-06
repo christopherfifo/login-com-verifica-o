@@ -58,8 +58,9 @@
   align-items: center;
 }
 
-.container.dark{
-  box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25), 0 10px 10px rgba(255, 255, 255, 0.22);
+.container.dark {
+  box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25),
+    0 10px 10px rgba(255, 255, 255, 0.22);
 }
 
 .obj.dark#dark {
@@ -111,6 +112,6 @@ a.dark:hover {
   color: rgb(43, 43, 151);
 }
 
-.tema.dark:hover .home-link{
-    color: rgb(43, 43, 151);
+.tema.dark:hover .home-link {
+  color: rgb(43, 43, 151);
 }

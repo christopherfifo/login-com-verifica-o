@@ -156,19 +156,19 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: center;
     gap: 1.25rem;
   }
-  .senha_title{
+  .senha_title {
     font-size: 1.5em;
   }
-  .senha_dados-info{
+  .senha_dados-info {
     margin-block: 0.5rem;
   }
-  .especial{
+  .especial {
     margin-bottom: 0;
   }
-  .senha-btn{
+  .senha-btn {
     margin-block: 0.75rem;
   }
-  .senha_texto{
+  .senha_texto {
     line-height: 1.5;
   }
 }
