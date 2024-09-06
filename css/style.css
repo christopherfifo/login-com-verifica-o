@@ -399,7 +399,7 @@ input {
   .container {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 90dvh;
     margin-top: 3.75rem;
   }
 .form-container{
@@ -449,7 +449,7 @@ button{
   .container {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 90dvh;
     margin-top: 3rem;
   }
 .form-container{

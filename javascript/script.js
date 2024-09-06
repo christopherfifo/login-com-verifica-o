@@ -19,6 +19,8 @@ const form = document.getElementById("form");
 const campos = document.querySelectorAll(".required");
 const span = document.querySelectorAll(".error_span");
 const validarRegistro = document.getElementById("vali_register");
+const validarLogin = document.getElementById("vali_login");
+const inputs_login = document.querySelectorAll(".inputs_login")
 const emailRegex =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
@@ -95,6 +97,27 @@ campos.forEach((campo, index) => {
 });
 
 validarRegistro.addEventListener("click", validacaoFinal);
+
+function validacaoLogin(event){
+  event.preventDefault()
+    let formValido = ''
+
+  inputs_login.forEach((inputs) => {
+    if (inputs.value === "") {
+      formValido = false; 
+      alert("Formulário inválido! Preencha todos os campos.");
+    }else{
+      formValido = true;}
+  });
+
+  if (formValido) {
+    alert("Formulário válido!"); 
+  } else {
+    alert("Formulário inválido! Preencha todos os campos.");
+  }
+}
+
+validarLogin.addEventListener("click", validacaoLogin);
 
 //! trocar de tema
 
