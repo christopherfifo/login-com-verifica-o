@@ -399,7 +399,7 @@ input {
   .container {
     display: flex;
     flex-direction: column;
-    height: 90dvh;
+    height: 85dvh;
     margin-top: 3.75rem;
   }
 .form-container{
@@ -434,11 +434,15 @@ button{
   }
   .register-container{
     padding: 0;
-    padding-block: 0.5rem;
     overflow-y: scroll;
     background: white;
   }
-
+  .problema{
+    margin-top: 1.15rem;
+  }
+  .social-container{
+    margin-bottom: 0.5rem;
+  }
 }
 
 
@@ -450,7 +454,7 @@ button{
   .container {
     display: flex;
     flex-direction: column;
-    height: 90dvh;
+    height: 85dvh;
     margin-top: 3rem;
   }
 .form-container{
