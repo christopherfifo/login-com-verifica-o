@@ -105,7 +105,6 @@ function validacaoLogin(event){
   inputs_login.forEach((inputs) => {
     if (inputs.value === "") {
       formValido = false; 
-      alert("Formulário inválido! Preencha todos os campos.");
     }else{
       formValido = true;}
   });

@@ -434,6 +434,7 @@ button{
   }
   .register-container{
     padding: 0;
+    padding-block: 0.5rem;
     overflow-y: scroll;
     background: white;
   }
